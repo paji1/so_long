@@ -6,7 +6,7 @@
 #    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/05/31 04:44:43 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/01 03:10:02 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,14 @@ ifeq ($(OS),Linux)
 	# -I/usr/local/include -Imlx_linux -O3
 	CFLAGS=-Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz 
 else
-	CFLAGS= 
+	CFLAGS=
 endif
 # ################COMMANDS###########################
 RM = rm -rf
 CC = gcc -g
 # ################SRCS_Objs##########################
 SRC = gnl/get_next_line.c gnl/get_next_line_utils.c \
-	main.c
+	main.c link_list.c check_line_ber.c parse.c ft_free.c
 OBJ = $(addprefix obj/, $(SRC:.c=.o))
 # ################LIBRARY############################
 
@@ -69,4 +69,4 @@ fclean : clean
 	@ $(RM) $(NAME)
 
 re : fclean all
-	./main
+	# ./main
