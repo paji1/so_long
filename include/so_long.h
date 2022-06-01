@@ -34,5 +34,6 @@ int			check_len(char *s, int len, t_mapline **lines);
 int			str_to_lines(char *s, t_mapline **lines);
 int			parse(int ac, char **av, t_mapline **lines);
 void		ft_free(t_mapline **lst);
+int			check_wall(char *line, int i, t_mapline *lines);
 
 #endif

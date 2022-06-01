@@ -1,12 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/taha/desktop/so_long'
-mkdir -p obj
-gcc -g -c src/main.c -o obj/main.o
-echo '\033[0;34m'"Making the main.o"'\033[0m'
-mkdir -p obj
-gcc -g -c src/ft_free.c -o obj/ft_free.o
-echo '\033[0;34m'"Making the ft_free.o"'\033[0m'
-gcc -g obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o libft/library/libft.a -Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz  -omain
 echo 
 make: Leaving directory '/home/taha/desktop/so_long'
  

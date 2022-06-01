@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  1 03:10:06 2022
+# Make data base, printed on Wed Jun  1 04:48:10 2022
 
 # Variables
 
@@ -18,13 +18,13 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
-# makefile (from 'makefile', line 27)
+# makefile (from 'makefile', line 28)
 OBJ = $(addprefix obj/, $(SRC:.c=.o))
 # makefile (from 'makefile', line 25)
-SRC = gnl/get_next_line.c gnl/get_next_line_utils.c main.c link_list.c check_line_ber.c parse.c ft_free.c
+SRC = gnl/get_next_line.c gnl/get_next_line_utils.c main.c link_list.c check_line_ber.c parse.c ft_free.c check_wall.c
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'makefile', line 30)
+# makefile (from 'makefile', line 31)
 LIBRARY = libft/library/libft.a
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -39,6 +39,7 @@ SHELL = /bin/sh
 # makefile (from 'makefile', line 22)
 RM = rm -rf
 # environment
+ 
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /bin/sh
@@ -48,7 +49,6 @@ CFLAGS = -Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -
 MAKEFILE_LIST :=  makefile
 # 'override' directive
 GNUMAKEFLAGS := 
- 
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -65,7 +65,7 @@ VSCODE_LOG_STACK = false
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
 %F = $(notdir $%)
-# makefile (from 'makefile', line 33)
+# makefile (from 'makefile', line 34)
 COLOR = '\033[0;32m'
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -103,9 +103,9 @@ MAKE_VERSION := 4.1
 USER = taha
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from 'makefile', line 39)
+# makefile (from 'makefile', line 40)
 NAME = main
-# makefile (from 'makefile', line 35)
+# makefile (from 'makefile', line 36)
 RE = '\033[0;34m'
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -113,7 +113,7 @@ RE = '\033[0;34m'
 VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Taha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
 MAKE_COMMAND := make
-# makefile (from 'makefile', line 34)
+# makefile (from 'makefile', line 35)
 NC = '\033[0m'
 # default
 .VARIABLES := 
@@ -121,7 +121,7 @@ NC = '\033[0m'
 *F = $(notdir $*)
 # makefile (from 'makefile', line 14)
 OS = $(shell uname -s)
-# makefile (from 'makefile', line 36)
+# makefile (from 'makefile', line 37)
 RED = '\033[0;31m'
 # makefile
 MAKEFLAGS = pqrR
@@ -160,7 +160,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu-18.04
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=5/118=4%
+# Load=74/1024=7%, Rehash=0, Collisions=5/116=4%
 
 # Pattern-specific Variable Values
 
@@ -171,20 +171,20 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 # . (device 2064, inode 104341): 14 files, no impossibilities.
 # gnl (device 2064, inode 107035): 3 files, no impossibilities so far.
 # libft/library (device 2064, inode 107182): No files, no impossibilities so far.
-# src (device 2064, inode 107000): 7 files, no impossibilities so far.
+# src (device 2064, inode 107000): 8 files, no impossibilities so far.
 
-# 24 files, no impossibilities in 4 directories.
+# 25 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c
-#  recipe to execute (from 'makefile', line 52):
+#  recipe to execute (from 'makefile', line 53):
 	@ mkdir -p obj
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 obj/gnl/%.o: gnl/%.c libft/library/libft.a
-#  recipe to execute (from 'makefile', line 57):
+#  recipe to execute (from 'makefile', line 58):
 	@ mkdir -p obj/gnl
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
@@ -193,13 +193,20 @@ obj/gnl/%.o: gnl/%.c libft/library/libft.a
 
 # Files
 
+# Not a target:
+src/check_wall.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-01 04:46:58.3976763
+#  File has been updated.
+#  Successfully updated.
+
 obj/gnl/get_next_line.o: gnl/get_next_line.c libft/library/libft.a
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'get_next_line'
-#  Last modified 2022-06-01 03:01:04.1176763
+#  Last modified 2022-06-01 04:48:04.9976763
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'makefile', line 57):
+#  recipe to execute (from 'makefile', line 58):
 	@ mkdir -p obj/gnl
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
@@ -207,54 +214,76 @@ obj/gnl/get_next_line.o: gnl/get_next_line.c libft/library/libft.a
 all: main
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := main
+# automatic
+# | := 
+# automatic
+# < := main
+# automatic
+# ^ := main
+# automatic
+# ? := main
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
-#  recipe to execute (from 'makefile', line 44):
+# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  recipe to execute (from 'makefile', line 45):
 	echo $(T)
 
-# Not a target:
-obj/ft_free.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/ft_free.o: src/ft_free.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ft_free'
+#  Last modified 2022-06-01 04:48:05.2076763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
+	@ mkdir -p obj
+	@ $(CC) -c $< -o $@
+	@ echo ${RE}"Making the $(notdir $@)"${NC}
+
+obj/link_list.o: src/link_list.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'link_list'
+#  Last modified 2022-06-01 04:48:05.0976763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
+	@ mkdir -p obj
+	@ $(CC) -c $< -o $@
+	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 # Not a target:
-obj/link_list.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/check_line_ber.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-01 03:34:22.4576763
+#  File has been updated.
+#  Successfully updated.
 
 obj/main.o: src/main.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-01 03:01:04.1876763
+#  Last modified 2022-06-01 04:48:05.0676763
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/main.o
-# automatic
-# % := 
-# automatic
-# * := main
-# automatic
-# + := src/main.c
-# automatic
-# | := 
-# automatic
-# < := src/main.c
-# automatic
-# ^ := src/main.c
-# automatic
-# ? := src/main.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=3/17=18%
-#  recipe to execute (from 'makefile', line 52):
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
 	@ mkdir -p obj
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 gnl/get_next_line.c:
@@ -267,13 +296,28 @@ test: main
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 46):
+#  recipe to execute (from 'makefile', line 47):
 	./main
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-01 03:10:02.9976763
+#  Last modified 2022-06-01 04:47:58.5876763
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/ft_free.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-01 03:12:13.0176763
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/link_list.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-01 03:13:07.6776763
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -281,14 +325,14 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 68):
+#  recipe to execute (from 'makefile', line 69):
 	@ make fclean -C libft 
 	@ $(RM) $(NAME)
 
 # Not a target:
 src/main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-01 03:02:46.2176763
+#  Last modified 2022-06-01 03:35:41.3476763
 #  File has been updated.
 #  Successfully updated.
 
@@ -302,30 +346,35 @@ re: fclean all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 72):
+#  recipe to execute (from 'makefile', line 73):
 	# ./main
 
-# Not a target:
-obj/parse.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/parse.o: src/parse.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'parse'
+#  Last modified 2022-06-01 04:48:05.1776763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
+	@ mkdir -p obj
+	@ $(CC) -c $< -o $@
+	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 65):
+#  recipe to execute (from 'makefile', line 66):
 	@ make clean -C libft 
 	@ $(RM) $(OBJ)
 
 obj/gnl/get_next_line_utils.o: gnl/get_next_line_utils.c libft/library/libft.a
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'get_next_line_utils'
-#  Last modified 2022-06-01 03:01:04.1476763
+#  Last modified 2022-06-01 04:48:05.0276763
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'makefile', line 57):
+#  recipe to execute (from 'makefile', line 58):
 	@ mkdir -p obj/gnl
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
@@ -337,44 +386,66 @@ gnl/get_next_line_utils.c:
 #  File has been updated.
 #  Successfully updated.
 
-main: libft/library/libft.a obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o
-#  Implicit rule search has not been done.
-#  Last modified 2022-06-01 03:01:04.3776763
+obj/check_wall.o: src/check_wall.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_wall'
+#  Last modified 2022-06-01 04:48:05.2476763
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
-#  recipe to execute (from 'makefile', line 49):
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
+	@ mkdir -p obj
+	@ $(CC) -c $< -o $@
+	@ echo ${RE}"Making the $(notdir $@)"${NC}
+
+main: libft/library/libft.a obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o obj/check_wall.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-01 04:48:05.3376763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 50):
 	@ $(CC) $(OBJ) $(LIBRARY) $(CFLAGS) -o$(NAME)
 
 libft/library/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-01 03:01:04.0976763
+#  Last modified 2022-06-01 04:48:04.9776763
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'makefile', line 62):
+#  recipe to execute (from 'makefile', line 63):
 	@ make -C libft
 
 # Not a target:
-obj/check_line_ber.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/parse.c:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-06-01 04:44:18.7776763
+#  File has been updated.
+#  Successfully updated.
+
+obj/check_line_ber.o: src/check_line_ber.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_line_ber'
+#  Last modified 2022-06-01 04:48:05.1376763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 53):
+	@ mkdir -p obj
+	@ $(CC) -c $< -o $@
+	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 # files hash-table stats:
-# Load=20/1024=2%, Rehash=0, Collisions=3/59=5%
+# Load=26/1024=3%, Rehash=0, Collisions=3/82=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 49 / storage = 553 B / avg = 11 B
-# current buf: size = 8162 B / used = 553 B / count = 49 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 61 / storage = 713 B / avg = 11 B
+# current buf: size = 8162 B / used = 713 B / count = 61 / avg = 11 B
 
-# strcache performance: lookups = 81 / hit rate = 39%
+# strcache performance: lookups = 99 / hit rate = 38%
 # hash-table stats:
-# Load=49/8192=1%, Rehash=0, Collisions=2/81=2%
-# Finished Make data base on Wed Jun  1 03:10:06 2022
+# Load=61/8192=1%, Rehash=0, Collisions=2/99=2%
+# Finished Make data base on Wed Jun  1 04:48:10 2022
 
  
