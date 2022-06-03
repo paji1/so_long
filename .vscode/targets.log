@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  1 04:48:10 2022
+# Make data base, printed on Fri Jun  3 03:56:59 2022
 
 # Variables
 
@@ -39,7 +39,6 @@ SHELL = /bin/sh
 # makefile (from 'makefile', line 22)
 RM = rm -rf
 # environment
- 
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /bin/sh
@@ -72,7 +71,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /home/taha/desktop/so_long
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f0d3eed8-4f11-4466-a864-2dd6edcff547.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ab87f6c7-22c1-4d30-b383-07b9c27d18d2.sock
 # environment
 WSL_INTEROP = /run/WSL/11_interop
 # environment
@@ -160,7 +159,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu-18.04
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=5/116=4%
+# Load=74/1024=7%, Rehash=0, Collisions=5/118=4%
 
 # Pattern-specific Variable Values
 
@@ -193,17 +192,10 @@ obj/gnl/%.o: gnl/%.c libft/library/libft.a
 
 # Files
 
-# Not a target:
-src/check_wall.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-01 04:46:58.3976763
-#  File has been updated.
-#  Successfully updated.
-
 obj/gnl/get_next_line.o: gnl/get_next_line.c libft/library/libft.a
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'get_next_line'
-#  Last modified 2022-06-01 04:48:04.9976763
+#  Last modified 2022-06-01 05:01:53.8676763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 58):
@@ -214,46 +206,24 @@ obj/gnl/get_next_line.o: gnl/get_next_line.c libft/library/libft.a
 all: main
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := all
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := main
-# automatic
-# | := 
-# automatic
-# < := main
-# automatic
-# ^ := main
-# automatic
-# ? := main
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'makefile', line 45):
 	echo $(T)
 
-obj/ft_free.o: src/ft_free.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'ft_free'
-#  Last modified 2022-06-01 04:48:05.2076763
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 53):
-	@ mkdir -p obj
-	@ $(CC) -c $< -o $@
-	@ echo ${RE}"Making the $(notdir $@)"${NC}
+# Not a target:
+obj/ft_free.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 obj/link_list.o: src/link_list.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'link_list'
-#  Last modified 2022-06-01 04:48:05.0976763
+#  Last modified 2022-06-01 05:01:53.9576763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 53):
@@ -271,19 +241,13 @@ src/check_line_ber.c:
 obj/main.o: src/main.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-01 04:48:05.0676763
+#  Last modified 2022-06-01 05:01:53.9276763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 53):
 	@ mkdir -p obj
 	@ $(CC) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
-
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 gnl/get_next_line.c:
@@ -307,21 +271,14 @@ makefile:
 #  Successfully updated.
 
 # Not a target:
-src/ft_free.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-01 03:12:13.0176763
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 src/link_list.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-01 03:13:07.6776763
- 
 #  File has been updated.
 #  Successfully updated.
 
 fclean: clean
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -352,9 +309,27 @@ re: fclean all
 obj/parse.o: src/parse.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'parse'
-#  Last modified 2022-06-01 04:48:05.1776763
+#  Last modified 2022-06-01 05:01:54.0276763
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/parse.o
+# automatic
+# % := 
+# automatic
+# * := parse
+# automatic
+# + := src/parse.c
+# automatic
+# | := 
+# automatic
+# < := src/parse.c
+# automatic
+# ^ := src/parse.c
+# automatic
+# ? := src/parse.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/17=18%
 #  recipe to execute (from 'makefile', line 53):
 	@ mkdir -p obj
 	@ $(CC) -c $< -o $@
@@ -371,7 +346,7 @@ clean:
 obj/gnl/get_next_line_utils.o: gnl/get_next_line_utils.c libft/library/libft.a
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'get_next_line_utils'
-#  Last modified 2022-06-01 04:48:05.0276763
+#  Last modified 2022-06-01 05:01:53.8876763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 58):
@@ -386,28 +361,25 @@ gnl/get_next_line_utils.c:
 #  File has been updated.
 #  Successfully updated.
 
-obj/check_wall.o: src/check_wall.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'check_wall'
-#  Last modified 2022-06-01 04:48:05.2476763
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 53):
-	@ mkdir -p obj
-	@ $(CC) -c $< -o $@
-	@ echo ${RE}"Making the $(notdir $@)"${NC}
+# Not a target:
+obj/check_wall.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 main: libft/library/libft.a obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o obj/check_wall.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-01 04:48:05.3376763
+#  Last modified 2022-06-01 05:01:54.1876763
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'makefile', line 50):
 	@ $(CC) $(OBJ) $(LIBRARY) $(CFLAGS) -o$(NAME)
 
 libft/library/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-01 04:48:04.9776763
+#  Last modified 2022-06-01 05:01:53.8376763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 63):
@@ -416,15 +388,14 @@ libft/library/libft.a:
 # Not a target:
 src/parse.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-01 04:44:18.7776763
+#  Last modified 2022-06-02 05:41:46.1855478
 #  File has been updated.
 #  Successfully updated.
 
 obj/check_line_ber.o: src/check_line_ber.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'check_line_ber'
-#  Last modified 2022-06-01 04:48:05.1376763
+#  Last modified 2022-06-01 05:01:53.9976763
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 53):
@@ -433,19 +404,19 @@ obj/check_line_ber.o: src/check_line_ber.c
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 # files hash-table stats:
-# Load=26/1024=3%, Rehash=0, Collisions=3/82=4%
+# Load=24/1024=2%, Rehash=0, Collisions=3/73=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 61 / storage = 713 B / avg = 11 B
-# current buf: size = 8162 B / used = 713 B / count = 61 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 57 / storage = 663 B / avg = 11 B
+# current buf: size = 8162 B / used = 663 B / count = 57 / avg = 11 B
 
-# strcache performance: lookups = 99 / hit rate = 38%
+# strcache performance: lookups = 92 / hit rate = 38%
 # hash-table stats:
-# Load=61/8192=1%, Rehash=0, Collisions=2/99=2%
-# Finished Make data base on Wed Jun  1 04:48:10 2022
+# Load=57/8192=1%, Rehash=0, Collisions=2/92=2%
+# Finished Make data base on Fri Jun  3 03:56:59 2022
 
  

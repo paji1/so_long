@@ -1,5 +1,33 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/taha/desktop/so_long'
+make -C libft
+ 
+mkdir -p obj/gnl
+gcc -g -c gnl/get_next_line.c -o obj/gnl/get_next_line.o
+echo '\033[0;34m'"Making the get_next_line.o"'\033[0m'
+mkdir -p obj/gnl
+gcc -g -c gnl/get_next_line_utils.c -o obj/gnl/get_next_line_utils.o
+echo '\033[0;34m'"Making the get_next_line_utils.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/main.c -o obj/main.o
+echo '\033[0;34m'"Making the main.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/link_list.c -o obj/link_list.o
+echo '\033[0;34m'"Making the link_list.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/check_line_ber.c -o obj/check_line_ber.o
+echo '\033[0;34m'"Making the check_line_ber.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/parse.c -o obj/parse.o
+echo '\033[0;34m'"Making the parse.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/ft_free.c -o obj/ft_free.o
+echo '\033[0;34m'"Making the ft_free.o"'\033[0m'
+mkdir -p obj
+ 
+gcc -g -c src/check_wall.c -o obj/check_wall.o
+echo '\033[0;34m'"Making the check_wall.o"'\033[0m'
+gcc -g obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o obj/check_wall.o libft/library/libft.a -Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz  -omain
 echo 
 make: Leaving directory '/home/taha/desktop/so_long'
  

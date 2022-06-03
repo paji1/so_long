@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 02:53:14 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/01 03:34:22 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/03 05:35:21 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,8 @@ int str_to_lines(char *s, t_mapline **lines)
 	if (s && *s != '\n' && *s)
 	{
 		check_len(s, len, lines);
-		add_line(lines, newline(s));
-		free(s);
-		return (1);
+		return (add_line(lines, newline(s)),(*lines)->line_size = len, \
+			free(s), 1);
 	}
 	else
 		return (free(s), 0);

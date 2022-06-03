@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 02:51:19 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/01 03:13:07 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/03 05:39:19 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,17 @@ void add_line(t_mapline **lines, t_mapline *newline)
 {
 	newline->next = *lines;
 	*lines = newline;
+}
+
+int	rows_size(t_mapline *lines)
+{
+	int i;
+
+	i = 0;
+	while (lines)
+	{
+		i++;
+		lines = lines->next;
+	}
+	return (i);
 }
