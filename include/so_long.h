@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
+/*   Updated: 2022/06/03 06:23:57 by tel-mouh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG
 # define SO_LONG
 
@@ -12,25 +24,7 @@
 #include "../libft/include/libft.h"
 #include "../gnl/get_next_line.h"
 
-
-typedef struct s_mobs
-{
-	int players;
-	int wall;
-	int empty;
-	int exit;
-	int collectible;
-}t_mobs;
-
-
-
-typedef struct s_mapline
-{
-	char				*line;
-	int					line_size;
-	struct s_mapline	*next;
-}t_mapline;
-
+#include "types.h"
 
 t_mapline	*newline(char *s);
 void		add_line(t_mapline **lines, t_mapline *newline);
