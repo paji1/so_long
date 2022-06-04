@@ -1,7 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/taha/desktop/so_long'
-make -C libft
  
+make -C libft
 mkdir -p obj/gnl
 gcc -g -c gnl/get_next_line.c -o obj/gnl/get_next_line.o
 echo '\033[0;34m'"Making the get_next_line.o"'\033[0m'
@@ -24,10 +24,18 @@ mkdir -p obj
 gcc -g -c src/ft_free.c -o obj/ft_free.o
 echo '\033[0;34m'"Making the ft_free.o"'\033[0m'
 mkdir -p obj
- 
 gcc -g -c src/check_wall.c -o obj/check_wall.o
 echo '\033[0;34m'"Making the check_wall.o"'\033[0m'
-gcc -g obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o obj/check_wall.o libft/library/libft.a -Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz  -omain
+mkdir -p obj
+gcc -g -c src/draw_image.c -o obj/draw_image.o
+echo '\033[0;34m'"Making the draw_image.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/init.c -o obj/init.o
+echo '\033[0;34m'"Making the init.o"'\033[0m'
+mkdir -p obj
+gcc -g -c src/exit_game.c -o obj/exit_game.o
+echo '\033[0;34m'"Making the exit_game.o"'\033[0m'
+gcc -g obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o obj/main.o obj/link_list.o obj/check_line_ber.o obj/parse.o obj/ft_free.o obj/check_wall.o obj/draw_image.o obj/init.o obj/exit_game.o libft/library/libft.a -Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz  -omain
 echo 
 make: Leaving directory '/home/taha/desktop/so_long'
  

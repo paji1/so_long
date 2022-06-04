@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:52 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/03 07:37:37 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/04 10:58:29 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,13 @@ typedef struct s_player_img
 	void *down;
 	void *left;
 	void *right;
-	void *stand;
 }t_player_img;
 
 typedef struct s_imgs
 {
 	void			*img_wall;
 	t_player_img	player;
-	void			*floor;
+	void			*door;
 	void			*clocktibe;
 }t_img;
 

@@ -2,7 +2,9 @@
 	"files.associations": {
 		"get_next_line.h": "c",
 		"so_long.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"ap_keysym.h": "c",
+		"keysym.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

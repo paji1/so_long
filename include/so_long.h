@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/03 06:23:57 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/04 10:24:09 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <X11/XKBlib.h>
 #include <X11/X.h>
+#include <X11/keysym.h>
 #include <stdio.h>
 #include <fcntl.h>
 
@@ -35,4 +36,13 @@ int			parse(int ac, char **av, t_mapline **lines, t_mobs *mobs);
 void		ft_free(t_mapline **lst);
 int			check_wall(char *line, int i, t_mapline *lines);
 int 		rows_size(t_mapline *lines);
+int			draw_map(t_vars *vars);
+void		game_init(t_vars *vars, t_mobs *mobs, t_mapline **line);
+void		init_images(t_vars *vars);
+int			exit_game(t_vars *vars,int exit_n);
+char		get_mobs(t_vars *vars, int y, int x);
+void		clear_mobs(t_vars *vars, int x, int y);
+
+
+
 #endif
