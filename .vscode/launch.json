@@ -8,8 +8,8 @@
 			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "/home/taha/desktop/so_long/main",
-			"args": ["../maps/laby.ber"],
+			"program": "/home/taha/desktop/so_long/so_long",
+			"args": ["../mandatory/maps/laby.ber"],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],
@@ -28,6 +28,5 @@
 				}
 			]
 		}
-
 	]
 }

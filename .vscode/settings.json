@@ -4,7 +4,9 @@
 		"so_long.h": "c",
 		"libft.h": "c",
 		"ap_keysym.h": "c",
-		"keysym.h": "c"
+		"keysym.h": "c",
+		"types.h": "c",
+		"so_long_bonus.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
