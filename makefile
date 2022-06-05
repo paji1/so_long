@@ -6,7 +6,7 @@
 #    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/06/04 05:38:08 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/05 01:02:35 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ CC = gcc -g
 # ################SRCS_Objs##########################
 SRC = gnl/get_next_line.c gnl/get_next_line_utils.c \
 	main.c link_list.c check_line_ber.c parse.c ft_free.c \
-	check_wall.c draw_image.c init.c exit_game.c
+	check_wall.c draw_image.c init.c exit_game.c \
+	key_handler.c
 OBJ = $(addprefix obj/, $(SRC:.c=.o))
 # ################LIBRARY############################
 

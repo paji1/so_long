@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/04 10:24:09 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/05 01:02:17 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void		init_images(t_vars *vars);
 int			exit_game(t_vars *vars,int exit_n);
 char		get_mobs(t_vars *vars, int y, int x);
 void		clear_mobs(t_vars *vars, int x, int y);
-
-
+int			key_handler(int keycode , t_vars *vars);
 
 #endif
