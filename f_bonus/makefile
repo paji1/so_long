@@ -6,7 +6,7 @@
 #    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/06/05 10:44:38 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/06 05:05:43 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ CC = gcc -g
 SRC = gnl/get_next_line.c gnl/get_next_line_utils.c \
 	link_list_bonus.c check_line_ber_bonus.c parse_bonus.c ft_free_bonus.c \
 	check_wall_bonus.c draw_image_bonus.c init_bonus.c exit_game_bonus.c \
-	key_handler_bonus.c so_long_bonus.c mobs_bonus.c
+	key_handler_bonus.c so_long_bonus.c mobs_bonus.c  enemy_bonus.c
 	
 OBJ = $(addprefix obj/, $(SRC:.c=.o))
 # ################LIBRARY############################

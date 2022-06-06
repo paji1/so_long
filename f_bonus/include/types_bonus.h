@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:52 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 11:44:48 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 10:20:13 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ typedef struct s_vars
 	int			h;
 	int			x;
 	int			y;
+	int			start;
+	int 		end;
 	int	 		count;
 	t_wsize		window;
 	t_psize		player;

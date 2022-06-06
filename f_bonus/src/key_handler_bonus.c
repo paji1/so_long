@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:43:21 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 12:20:16 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 10:03:01 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,41 @@ void	put_player(t_vars * vars, int keycode)
 					vars->player.y*30);
 }
 
+static void handle_collectible(t_vars *vars, int keycode, char mobs)
+{
+	clear_mobs(vars, vars->player.x, vars->player.y);
+	if (keycode == XK_s)
+		vars->player.y += 1;
+	else if (keycode == XK_w)
+		vars->player.y -= 1;
+	else if (keycode == XK_a)
+		vars->player.x -= 1;
+	else if (keycode == XK_d)
+		vars->player.x += 1;
+	if (mobs == 'C')
+	{
+		vars->mobs->collectible -= 1;
+		clear_mobs(vars, vars->player.x, vars->player.y);
+	}
+	vars->count += 1;
+	put_mobs(vars, vars->player.x, vars->player.y, 'P');
+}
+
 static void check_sq(t_vars *vars, int keycode, char mobs)
 {
 	vars->keycode = keycode;
 	if (mobs == '0'  || mobs == 'C')
-	{
-		clear_mobs(vars, vars->player.x, vars->player.y);
-		if (keycode == XK_s)
-			vars->player.y += 1;
-		else if (keycode == XK_w)
-			vars->player.y -= 1;
-		else if (keycode == XK_a)
-			vars->player.x -= 1;
-		else if (keycode == XK_d)
-			vars->player.x += 1;
-		if (mobs == 'C')
-		{
-			vars->mobs->collectible -= 1;
-			clear_mobs(vars, vars->player.x, vars->player.y);
-		}
-		vars->count += 1;
-		put_mobs(vars, vars->player.x, vars->player.y, 'P');
-	}
+		handle_collectible(vars, keycode , mobs);
 	else if (mobs == 'E' && !vars->mobs->collectible)
+	{
+		vars->end = WIN;
 		exit_game(vars, EXIT_SUCCESS);
+	}
 	else if (mobs == 'M')
+	{
+		vars->end = LOSE;
 		exit_game(vars, EXIT_SUCCESS);
+	}
 	mlx_clear_window(vars->mlx_ptr , vars->win_ptr);
 	draw_map(vars);
 	put_player(vars,keycode);

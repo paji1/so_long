@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 11:59:38 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 09:08:09 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 #include "../gnl/get_next_line.h"
 
 #include "types_bonus.h"
+# define LOSE 3
+# define WIN 2
+# define NOTHING 1
 
 t_mapline	*newline(char *s);
 void		add_line(t_mapline **lines, t_mapline *newline);
@@ -48,4 +51,5 @@ void		add_mobs(t_enemy **lines, t_enemy *newline);
 t_enemy		*new_mobs(int x, int y, int id);
 void		put_mobs(t_vars *vars, int x, int y, char mobs);
 void		ft_free_mobs(t_enemy **lst);
+int			enemy_move(t_vars *vars);
 #endif

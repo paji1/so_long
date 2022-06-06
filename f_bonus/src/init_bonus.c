@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:17:39 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 12:19:16 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 10:19:55 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void game_init(t_vars *vars, t_mobs *mobs, t_mapline **line)
 	vars->mobs = mobs;
 	vars->lines = line;
 	vars->count = 0;
+	vars->start = 0;
 	vars->mlx_ptr = mlx_init();
 	vars->window.x = (*line)->line_size * 30;
 	vars->window.y = rows_size(*line) * 30;

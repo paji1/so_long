@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun  5 12:02:30 2022
+# Make data base, printed on Mon Jun  6 05:10:13 2022
 
 # Variables
 
@@ -71,6 +71,7 @@ LOGNAME = taha
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
+ 
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -236,6 +237,6 @@ re: fclean all
 # strcache performance: lookups = 30 / hit rate = 40%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=1/30=3%
-# Finished Make data base on Sun Jun  5 12:02:30 2022
+# Finished Make data base on Mon Jun  6 05:10:13 2022
 
  

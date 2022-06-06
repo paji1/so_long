@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:43:21 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 01:01:54 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 08:20:27 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,11 @@ static void check_sq(t_vars *vars, int keycode, char mobs)
 		print_moves(&n_moves);
 	}
 	else if (mobs == 'E' && !vars->mobs->collectible)
+	{
+		print_moves(&n_moves);
+		ft_putstr_fd("\nyou win\n", 1);
 		exit_game(vars, EXIT_SUCCESS);
+	}
 	mlx_clear_window(vars->mlx_ptr , vars->win_ptr);
 	draw_map(vars);
 	put_player(vars,keycode);
