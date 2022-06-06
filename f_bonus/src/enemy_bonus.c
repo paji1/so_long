@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 07:39:35 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 11:25:05 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:21:24 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static void rand_move(t_vars *vars, int x, int y, t_enemy *enemy)
 			enemy->x += 1;
 	else if (rand() % 2 == 1 && (t == '0' || t == 'P'))
 			enemy->x -= 1;
-
 	put_mobs(vars, enemy->x, enemy->y, 'M');
 	if (enemy->x == vars->player.x && enemy->y == vars->player.y)
 	{

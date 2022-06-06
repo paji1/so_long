@@ -6,48 +6,40 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:17:39 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 10:19:55 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:13:00 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
 
-void init_images(t_vars *vars)
+static void handle_img(t_vars *vars, char *str, void **img)
 {
-	vars->imgs.img_wall = NULL;
-	vars->imgs.player.up = NULL;
-	vars->imgs.player.left = NULL;
-	vars->imgs.player.down = NULL;
-	vars->imgs.player.right = NULL;
-	vars->imgs.clocktibe = NULL;
-	vars->imgs.door = NULL;
-	vars->imgs.enem1 = NULL;
-	vars->imgs.enem2 = NULL;
-	vars->imgs.img_wall = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/wall/wall.xpm",&vars->w,&vars->h);
-	vars->imgs.player.up = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/moves/up.xpm",&vars->w,&vars->h);
-	vars->imgs.player.down = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/moves/down.xpm",&vars->w,&vars->h);
-	vars->imgs.player.left = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/moves/left.xpm",&vars->w,&vars->h);
-	vars->imgs.player.right = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/moves/right.xpm",&vars->w,&vars->h);
-	vars->imgs.clocktibe = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/collect/collect.xpm",&vars->w,&vars->h);
-	vars->imgs.door = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/door/door.xpm",&vars->w,&vars->h);
-	vars->imgs.enem1 = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/enemy/enem1.xpm",&vars->w,&vars->h);
-	vars->imgs.enem2 = mlx_xpm_file_to_image
-		(vars->mlx_ptr, "./f_bonus/xpms/enemy/enem2.xpm",&vars->w,&vars->h);
-	if (!vars->imgs.enem2  || !vars->imgs.enem1)
-			exit_game(vars, EXIT_FAILURE);	
-	if (!vars->imgs.img_wall || !vars->imgs.player.up || \
-		!vars->imgs.player.down || !vars->imgs.player.left || \
-			!vars->imgs.player.right || !vars->imgs.clocktibe \
-				|| !vars->imgs.door)
-			exit_game(vars, EXIT_FAILURE);
+	int fd;
+	
+	*img  = NULL;
+	*img = mlx_xpm_file_to_image
+		(vars->mlx_ptr, str,&vars->w,&vars->h);
+	fd = open(str, O_RDONLY);
+	if (fd == -1)
+	{
+		*img = NULL;
+		exit_game(vars, EXIT_FAILURE);
+	}
+	else
+		close(fd);
+}
+
+void init_images(t_vars *vars)
+{	
+	handle_img(vars, "./f_bonus/xpms/wall/wall.xpm", &vars->imgs.img_wall);
+	handle_img(vars, "./f_bonus/xpms/moves/up.xpm", &vars->imgs.player.up);
+	handle_img(vars, "./f_bonus/xpms/moves/down.xpm", &vars->imgs.player.down);
+	handle_img(vars, "./f_bonus/xpms/moves/left.xpm", &vars->imgs.player.left);
+	handle_img(vars, "./f_bonus/xpms/moves/right.xpm", &vars->imgs.player.right);;
+	handle_img(vars, "./f_bonus/xpms/collect/collect.xpm", &vars->imgs.clocktibe);
+	handle_img(vars, "./f_bonus/xpms/door/door.xpm", &vars->imgs.door);
+	handle_img(vars, "./f_bonus/xpms/enemy/enem1.xpm", &vars->imgs.enem1);
+	handle_img(vars, "./f_bonus/xpms/enemy/enem2.xpm", &vars->imgs.enem2);
 }
 
 void get_player(t_vars *vars)

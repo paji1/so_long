@@ -6,16 +6,11 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 06:28:31 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 07:24:39 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:22:30 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
-
-
-# define PLAYER 'P'
-# define EXIT 'E'
-# define COLLECTIBLE 'C'
 
 int	check_mobs(t_mapline *line, t_mobs *mobs)
 {
@@ -36,6 +31,7 @@ int	check_mobs(t_mapline *line, t_mobs *mobs)
 		return (1);
 	return (0);
 }
+
 static int check_valid(t_mapline **lines, t_mobs *mobs)
 {
 	int			i;

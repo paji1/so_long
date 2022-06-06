@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 09:08:09 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:18:01 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@
 # define LOSE 3
 # define WIN 2
 # define NOTHING 1
+# define PLAYER 'P'
+# define EXIT 'E'
+# define COLLECTIBLE 'C'
 
 t_mapline	*newline(char *s);
 void		add_line(t_mapline **lines, t_mapline *newline);
