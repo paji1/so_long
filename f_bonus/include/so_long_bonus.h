@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/08 07:26:20 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 09:25:59 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 #ifdef LINUX
-#include "../../minilibx-linux/mlx.h"
+#include "../../minilibx/mlx.h"
 #include <X11/XKBlib.h>
 #include <X11/X.h>
 #include <X11/keysym.h>

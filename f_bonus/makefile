@@ -6,7 +6,7 @@
 #    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/06/08 07:23:07 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/08 09:25:50 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ LIBRARY = libft/library/libft.a
 
 ifeq ($(OS),Linux)
 	DEFINE = -D LINUX=4
-	MINILIBX = ../minilibx-linux/libmlx_Linux.a
+	MINILIBX = ../minilibx/libmlx_Linux.a
 else
 	DEFINE = -D MAC=1
-	MINILIBX = ../minilibx-linux/libmlx.a
+	MINILIBX = ../minilibx/libmlx.a
 endif
 # ################COLOR##############################
 
