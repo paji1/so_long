@@ -6,15 +6,14 @@
 #    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/06/05 05:37:21 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/08 08:04:41 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ################OS#################################
 OS = $(shell uname -s)
 ifeq ($(OS),Linux)
-	# -I/usr/local/include -Imlx_linux -O3
-	CFLAGS=-Lmlx_linux -lmlx_Linux -L/usr/local/lib -Imlx_linux -lXext -lX11 -lm -lz 
+	CFLAGS=-lXext -lX11 -lm -lz 
 else
 	CFLAGS=
 endif
@@ -30,8 +29,16 @@ SRC = gnl/get_next_line.c gnl/get_next_line_utils.c \
 	
 OBJ = $(addprefix obj/, $(SRC:.c=.o))
 # ################LIBRARY############################
-
 LIBRARY = libft/library/libft.a
+
+ifeq ($(OS),Linux)
+	DEFINE = -D LINUX=1
+	MINILIBX = ../minilibx-linux/libmlx_Linux.a
+else
+	DEFINE = -D MAC=1
+	MINILIBX = ../minilibx-linux/libmlx.a
+endif
+
 # ################COLOR##############################
 
 COLOR='\033[0;32m'
@@ -46,16 +53,16 @@ NAME = ../so_long
 all : $(NAME)
 
 $(NAME): $(LIBRARY) $(OBJ) 
-	@ $(CC) $(OBJ) $(LIBRARY) $(CFLAGS) -o$(NAME)
+	@ $(CC) $(OBJ) $(LIBRARY) $(DEFINE) $(MINILIBX) $(CFLAGS) -o$(NAME)
 
 obj/%.o : src/%.c
 	@ mkdir -p obj
-	@ $(CC) -c $< -o $@
+	@ $(CC) $(DEFINE) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 obj/gnl/%.o: gnl/%.c $(LIBRARY)
 	@ mkdir -p obj/gnl
-	@ $(CC) -c $< -o $@
+	@ $(CC) $(DEFINE) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
 $(LIBRARY) :

@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:17:39 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:13:00 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 07:44:50 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,28 @@ static void handle_img(t_vars *vars, char *str, void **img)
 		(vars->mlx_ptr, str,&vars->w,&vars->h);
 	fd = open(str, O_RDONLY);
 	if (fd == -1)
-	{
-		*img = NULL;
 		exit_game(vars, EXIT_FAILURE);
-	}
 	else
 		close(fd);
 }
 
+static void init_with_null(t_vars *vars)
+{
+	vars->imgs.img_wall = NULL;
+	vars->imgs.player.up = NULL;
+	vars->imgs.player.left = NULL;
+	vars->imgs.player.down = NULL;
+	vars->imgs.player.right = NULL;
+	vars->imgs.clocktibe = NULL;
+	vars->imgs.door = NULL;
+	vars->imgs.enem1 = NULL;
+	vars->imgs.enem2 = NULL;
+}
+
+
 void init_images(t_vars *vars)
 {	
+	init_with_null(vars);
 	handle_img(vars, "./f_bonus/xpms/wall/wall.xpm", &vars->imgs.img_wall);
 	handle_img(vars, "./f_bonus/xpms/moves/up.xpm", &vars->imgs.player.up);
 	handle_img(vars, "./f_bonus/xpms/moves/down.xpm", &vars->imgs.player.down);

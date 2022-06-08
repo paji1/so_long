@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun  6 05:10:13 2022
+# Make data base, printed on Wed Jun  8 09:05:41 2022
 
 # Variables
 
@@ -71,7 +71,6 @@ LOGNAME = taha
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
- 
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -113,6 +112,7 @@ MFLAGS = -pqrR
 +F = $(notdir $+)
 # environment
 VSCODE_HANDLES_SIGPIPE = true
+ 
 # default
 MAKEFILES := 
 # automatic
@@ -146,9 +146,9 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 
 # Directories
 
-# . (device 2064, inode 104341): 10 files, no impossibilities.
+# . (device 2064, inode 104341): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -231,12 +231,12 @@ re: fclean all
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 148 B / avg = 8 B
-# current buf: size = 8162 B / used = 148 B / count = 18 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 163 B / avg = 8 B
+# current buf: size = 8162 B / used = 163 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 30 / hit rate = 40%
+# strcache performance: lookups = 31 / hit rate = 38%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/30=3%
-# Finished Make data base on Mon Jun  6 05:10:13 2022
+# Load=19/8192=0%, Rehash=0, Collisions=1/31=3%
+# Finished Make data base on Wed Jun  8 09:05:41 2022
 
  

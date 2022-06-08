@@ -6,18 +6,27 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 05:21:50 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 07:20:13 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG
 # define SO_LONG
 
-#include <mlx.h>
+
 #include <stdlib.h>
+#ifdef LINUX
+#include "../../minilibx-linux/mlx.h"
 #include <X11/XKBlib.h>
 #include <X11/X.h>
 #include <X11/keysym.h>
+#endif
+
+#ifdef MAC
+#include "../../minilibx-linux/mlx.h"
+#include "key_handler.h"
+#endif
+
 #include <stdio.h>
 #include <fcntl.h>
 

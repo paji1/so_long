@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:18:01 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 07:26:20 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,21 @@
 
 #include <mlx.h>
 #include <stdlib.h>
+
+#ifdef LINUX
+#include "../../minilibx-linux/mlx.h"
 #include <X11/XKBlib.h>
 #include <X11/X.h>
 #include <X11/keysym.h>
+#endif
+
+#ifdef MAC
+#include "../../minilibx-linux/mlx.h"
+#include "key_handler.h"
+#endif
+
 #include <stdio.h>
 #include <fcntl.h>
-
 #include <unistd.h>
 #include "../libft/include/libft.h"
 #include "../gnl/get_next_line.h"

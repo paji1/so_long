@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:09:42 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 06:37:24 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 07:17:11 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main(int ac, char  **av)
 	t_vars			vars;
 
 	parse(ac, av, &lines, &mobs);
+	printf("%d",LINUX);
 	game_init(&vars, &mobs, &lines);
 	game(&vars);
 	return exit_game(&vars, EXIT_SUCCESS),0;

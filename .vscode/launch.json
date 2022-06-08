@@ -9,7 +9,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "/home/taha/desktop/so_long/so_long_bonus",
-			"args": ["../mandatory/maps/laby.ber"],
+			"args": ["../laby.ber"],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],

@@ -6,13 +6,13 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:35:48 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:17:15 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 07:39:59 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
 
-static int check_and_destroy(void *img, t_vars *vars, int *check)
+static void check_and_destroy(void *img, t_vars *vars, int *check)
 {
 	if (img)
 		mlx_destroy_image(vars->mlx_ptr,img);
@@ -24,9 +24,9 @@ int exit_game(t_vars *vars,int exit_n)
 {
 	static int check;
 
-	check_and_destroy(vars->imgs.player.down, vars, &check);
 	check_and_destroy(vars->imgs.img_wall, vars, &check);
 	check_and_destroy(vars->imgs.player.up, vars, &check);
+	check_and_destroy(vars->imgs.player.down, vars, &check);
 	check_and_destroy(vars->imgs.player.left, vars, &check);
 	check_and_destroy(vars->imgs.player.right, vars, &check);
 	check_and_destroy(vars->imgs.clocktibe, vars, &check);

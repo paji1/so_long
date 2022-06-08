@@ -6,7 +6,10 @@
 		"ap_keysym.h": "c",
 		"keysym.h": "c",
 		"types.h": "c",
-		"so_long_bonus.h": "c"
+		"so_long_bonus.h": "c",
+		"x.h": "c",
+		"mlx.h": "c",
+		"xkblib.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

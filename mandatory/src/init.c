@@ -6,7 +6,7 @@
 /*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:17:39 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:14:16 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/08 08:03:24 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,31 @@ static void handle_img(t_vars *vars, char *str, void **img)
 		(vars->mlx_ptr, str,&vars->w,&vars->h);
 	fd = open(str, O_RDONLY);
 	if (fd == -1)
-	{
-		*img = NULL;
 		exit_game(vars, EXIT_FAILURE);
-	}
 	else
 		close(fd);
+}
+static void init_with_null(t_vars *vars)
+{
+	vars->imgs.img_wall = NULL;
+	vars->imgs.player.up = NULL;
+	vars->imgs.player.left = NULL;
+	vars->imgs.player.down = NULL;
+	vars->imgs.player.right = NULL;
+	vars->imgs.clocktibe = NULL;
+	vars->imgs.door = NULL;
 }
 
 void init_images(t_vars *vars)
 {	
-	handle_img(vars, "./f_bonus/xpms/wall/wall.xpm", &vars->imgs.img_wall);
-	handle_img(vars, "./f_bonus/xpms/moves/up.xpm", &vars->imgs.player.up);
-	handle_img(vars, "./f_bonus/xpms/moves/down.xpm", &vars->imgs.player.down);
-	handle_img(vars, "./f_bonus/xpms/moves/left.xpm", &vars->imgs.player.left);
-	handle_img(vars, "./f_bonus/xpms/moves/right.xpm", &vars->imgs.player.right);;
-	handle_img(vars, "./f_bonus/xpms/collect/collect.xpm", &vars->imgs.clocktibe);
-	handle_img(vars, "./f_bonus/xpms/door/door.xpm", &vars->imgs.door);
+	init_with_null(vars);
+	handle_img(vars, "mandatory/xpms/wall/wall.xpm", &vars->imgs.img_wall);
+	handle_img(vars, "mandatory/xpms/moves/up.xpm", &vars->imgs.player.up);
+	handle_img(vars, "mandatory/xpms/moves/down.xpm", &vars->imgs.player.down);
+	handle_img(vars, "mandatory/xpms/moves/left.xpm", &vars->imgs.player.left);
+	handle_img(vars, "mandatory/xpms/moves/right.xpm", &vars->imgs.player.right);;
+	handle_img(vars, "mandatory/xpms/collect/collect.xpm", &vars->imgs.clocktibe);
+	handle_img(vars, "mandatory/xpms/door/door.xpm", &vars->imgs.door);
 }
 
 void get_player(t_vars *vars)
