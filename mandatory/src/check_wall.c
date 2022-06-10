@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   check_wall.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 04:43:37 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/01 04:46:58 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 11:02:43 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-static int is_all_wall(char *s)
+static int	is_all_wall(char *s)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (s[++i])
 	{
 		if (s[i] != '1')
-			return (1);		
+			return (1);
 	}
 	return (0);
 }
 
-int  check_wall(char *line, int i, t_mapline *lines)
+int	check_wall(char *line, int i, t_mapline *lines)
 {
 	if (i == 0 && is_all_wall(line))
 		return (1);
