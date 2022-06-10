@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:35:48 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 06:42:08 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 10:38:54 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int exit_game(t_vars *vars,int exit_n)
 		ft_free(vars->lines);
 		mlx_clear_window(vars->mlx_ptr, vars->win_ptr);
 		mlx_destroy_window(vars->mlx_ptr, vars->win_ptr);
-		mlx_destroy_display(vars->mlx_ptr);
 		free(vars->mlx_ptr);
 		if (exit_n == EXIT_FAILURE)
 			write(2, "Error\n", 6);

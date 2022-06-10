@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 06:28:31 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:22:30 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 09:43:27 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_mobs(t_mapline *line, t_mobs *mobs)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while ((line->line)[++i])
@@ -26,13 +26,13 @@ int	check_mobs(t_mapline *line, t_mobs *mobs)
 		else if (line->line[i] == COLLECTIBLE)
 			mobs->collectible += 1;
 	}
-	if ((!mobs->collectible || !mobs->exit || mobs->players != 1) &&
-		 !line->next)
+	if ((!mobs->collectible || !mobs->exit || mobs->players != 1) && \
+		!line->next)
 		return (1);
 	return (0);
 }
 
-static int check_valid(t_mapline **lines, t_mobs *mobs)
+static int	check_valid(t_mapline **lines, t_mobs *mobs)
 {
 	int			i;
 	t_mapline	*line;
@@ -42,15 +42,16 @@ static int check_valid(t_mapline **lines, t_mobs *mobs)
 	while (line)
 	{
 		if (check_wall(line->line, i, line))
-			return write(2, "Error\n", 6), ft_free(lines), 1;
+			return (write(2, "Error\n", 6), ft_free(lines), 1);
 		if (check_mobs(line, mobs))
-			return write(2, "Error\n", 6), ft_free(lines), 1;
+			return (write(2, "Error\n", 6), ft_free(lines), 1);
 		i++;
 		line = line->next;
 	}
+	return (0);
 }
 
-int parse(int ac, char **av, t_mapline **lines, t_mobs *mobs)
+int	parse(int ac, char **av, t_mapline **lines, t_mobs *mobs)
 {
 	int	fd;
 
@@ -64,4 +65,5 @@ int parse(int ac, char **av, t_mapline **lines, t_mobs *mobs)
 		;
 	if (check_valid(lines, mobs))
 		exit(EXIT_FAILURE);
+	return (0);
 }

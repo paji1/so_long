@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   link_list_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 02:51:19 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/05 10:38:04 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 08:52:37 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../include/so_long_bonus.h"
 
 t_mapline	*newline(char *s)
 {
-	t_mapline *newline;
+	t_mapline	*newline;
 
 	newline = malloc(sizeof(t_mapline));
 	newline->line = ft_strdup(s);
@@ -24,12 +23,12 @@ t_mapline	*newline(char *s)
 
 t_enemy	*new_mobs(int x, int y, int id)
 {
-	t_enemy *newline;
+	t_enemy	*newline;
+
 	newline = malloc(sizeof(t_enemy));
 	newline->x = x;
 	newline->y = y;
 	newline->id = id;
-	
 	return (newline);
 }
 
@@ -57,4 +56,3 @@ int	rows_size(t_mapline *lines)
 	}
 	return (i);
 }
-

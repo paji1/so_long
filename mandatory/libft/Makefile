@@ -40,13 +40,12 @@ obj/%.o: src/%.c $(INCLUDES)
 	@ printf $(COLOR)"#"$(NC)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE_DIR) -c $< -o obj/$(notdir $@)
 	
-WAITING : 
-	@ echo ${COLOR}"LIBRARY OF LIBFT IS CREATING ..."${NC}
 
-$(NAME): WAITING $(OBJ_DIR) $(INCLUDES) 
+
+$(NAME): $(OBJ_DIR) $(INCLUDES) 
 	@ mkdir -p library
 	@ $(AR) library/$(NAME) $(OBJ_DIR)
-	@ echo ${COLOR}"\nLIBFT LIBRARY CREATED"${NC}
+	@ echo
 
 TEST :
 	@ $(CC) $(CFLAGS) $(MAIN)  -I $(INCLUDE_DIR) -o $(EXEC) library/$(NAME)

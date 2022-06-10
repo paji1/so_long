@@ -9,6 +9,7 @@
 # define XK_q 12
 # define KeyPress 2
 # define KeyPressMask 0
+# define BMASK 0
 
 
 #endif

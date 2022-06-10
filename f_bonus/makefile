@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+         #
+#    By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 04:31:34 by tel-mouh          #+#    #+#              #
-#    Updated: 2022/06/08 09:25:50 by tel-mouh         ###   ########.fr        #
+#    Updated: 2022/06/10 10:34:29 by tel-mouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,14 @@
 OS = $(shell uname -s)
 ifeq ($(OS),Linux)
 	# -I/usr/local/include -Imlx_linux -O3
-	CFLAGS=-lXext -lX11 -lm -lz 
+	LFLAGS=-lXext -lX11 -lm -lz 
 else
-	CFLAGS=
+	LFLAGS=-lmlx -framework OpenGL -framework AppKit
 endif
 # ################COMMANDS###########################
 RM = rm -rf
 CC = gcc -g
+CFLAG = -Wall -Wextra -Werror
 # ################SRCS_Objs##########################
 
 SRC = gnl/get_next_line.c gnl/get_next_line_utils.c \
@@ -38,7 +39,7 @@ ifeq ($(OS),Linux)
 	MINILIBX = ../minilibx/libmlx_Linux.a
 else
 	DEFINE = -D MAC=1
-	MINILIBX = ../minilibx/libmlx.a
+	MINILIBX =
 endif
 # ################COLOR##############################
 
@@ -55,20 +56,20 @@ NAME = ../so_long_bonus
 
 all : $(NAME)
 
-$(NAME): $(LIBRARY) $(OBJ) 
-	@ $(CC) $(OBJ) $(LIBRARY) $(DEFINE) $(MINILIBX) $(CFLAGS) -o $(NAME)
+$(NAME): library $(OBJ) 
+	@ $(CC) $(OBJ) $(CFLAG) $(LIBRARY) $(DEFINE) $(MINILIBX) $(LFLAGS) -o $(NAME)
 
 obj/%.o : src/%.c
 	@ mkdir -p obj
-	@ $(CC) $(DEFINE) -c $< -o $@
+	@ $(CC) $(CFLAG) $(DEFINE) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
-obj/gnl/%.o: gnl/%.c $(LIBRARY)
+obj/gnl/%.o: gnl/%.c
 	@ mkdir -p obj/gnl
-	@ $(CC)  $(DEFINE) -c $< -o $@
+	@ $(CC) $(CFLAG) $(DEFINE) -c $< -o $@
 	@ echo ${RE}"Making the $(notdir $@)"${NC}
 
-$(LIBRARY) :
+library :
 	@ make -C libft
 
 clean :

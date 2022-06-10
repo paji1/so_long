@@ -1,5 +1,6 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory '/home/taha/desktop/so_long'
+make: Entering directory `/Users/tel-mouh/Desktop/so_long'
+ 
 make -C mandatory
-make: Leaving directory '/home/taha/desktop/so_long'
+make: Leaving directory `/Users/tel-mouh/Desktop/so_long'
  

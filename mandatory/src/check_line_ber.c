@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_line_ber.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 02:53:14 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/03 05:35:21 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 09:35:17 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int check_ber(char *s)
 	return 1;
 }
 
-int	check_len(char *s, int len, t_mapline **lines)
+static void	check_len(char *s, int len, t_mapline **lines)
 {
 	int i;
 

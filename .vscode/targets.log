@@ -1,13 +1,14 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 4.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2014 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Jun  8 09:25:53 2022
+# Make data base, printed on Fri Jun 10 10:35:22 2022
 
 # Variables
 
@@ -16,9 +17,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
-# default
-.SHELLFLAGS := -c
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -28,117 +27,179 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/taha/desktop/so_long
+CURDIR := /Users/tel-mouh/Desktop/so_long
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /bin/sh
-# makefile (from 'makefile', line 1)
+_ = /usr/bin/make
+# makefile (from `makefile', line 1)
 MAKEFILE_LIST :=  makefile
-# 'override' directive
-GNUMAKEFLAGS := 
+# environment
+LESS_TERMCAP_se = [0m
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_CWD = /mnt/c/Users/Taha/AppData/Local/Programs/Microsoft VS Code
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cc6c00331l/T/vscode-ipc-ccefe1d3-e19f-4d02-ae18-cab70f9b640e.sock
 # environment
-PATH = /home/taha/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/CMake/bin:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/GnuWin32/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin:/mnt/c/Users/Taha/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/Taha/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/Taha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Taha/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Taha/AppData/Local/Programs/Microsoft VS Code Insiders/bin:/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/GnuWin32/bin
+VSCODE_CWD = /Users/tel-mouh/Desktop/so_long
 # environment
-VSCODE_WSL_DEBUG_INFO = true
+LESS_TERMCAP_me = [0m
+# environment
+LESS_TERMCAP_mb = [1;32m
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+SPACESHIP_VERSION = 3.16.7
+# environment
+LaunchInstanceID = 967241B1-D2F4-4A47-B025-B0B764ECD75B
 # environment
 VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ndFORaoDDX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/taha/desktop/so_long
+PWD = /Users/tel-mouh/Desktop/so_long
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7e5c78c3-daea-43ca-9f02-4c6b86e64c79.sock
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+LESS_TERMCAP_ue = [0m
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/taha
+HOME = /Users/tel-mouh
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-LOGNAME = taha
+VSCODE_CLI = 1
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+VSCODE_CODE_CACHE_PATH = /Users/tel-mouh/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+LOGNAME = tel-mouh
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+COLOR1 = \033[1;\033[1;31m
+# environment
+ZSH = /Users/tel-mouh/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
+LESS_TERMCAP_md = [1;32m
+# environment
+XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
+# environment
+LC_TERMINAL = iTerm2
+# environment
+PATH = /Users/tel-mouh/goinfre/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/tel-mouh/goinfre/.brew/bin/
+# environment
+SHLVL = 3
+# environment
+LESS_TERMCAP_so = [01;33m
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = tel-mouh
+# makefile
+.DEFAULT_GOAL := all
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
-# default
-MAKE_VERSION := 4.1
+TERM_SESSION_ID = w0t0p0:557BBDBC-6AA3-4C7E-B455-1CAF9FA13DF1
 # environment
-USER = taha
-# makefile
-.DEFAULT_GOAL := all
+COLOR4 = \033[1;\033[1;31m
 # environment
-NAME = DESKTOP-86S5UL4
+LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
-# environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Taha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
-MAKE_COMMAND := make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+COLOR2 = \033[1;\033[1;31m
+# environment
+TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cc6c00331l/T/
 # automatic
 *F = $(notdir $*)
-# makefile
-MAKEFLAGS = pqrR
 # environment
-MFLAGS = -pqrR
+VSCODE_IPC_HOOK = /Users/tel-mouh/Library/Application Support/Code/1.67.0-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 3.4.13
+# environment
+XPC_SERVICE_NAME = 0
+# environment
+LESS_TERMCAP_us = [1;4;31m
+# environment
+LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-VSCODE_HANDLES_SIGPIPE = true
+ITERM_SESSION_ID = w0t0p0:557BBDBC-6AA3-4C7E-B455-1CAF9FA13DF1
+# environment
+COLORFGBG = 7;0
+# environment
+__CF_USER_TEXT_ENCODING = 0x18C33:0:0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
+# environment
+HOMEBREW_NO_AUTO_UPDATE = 1
 # automatic
 <F = $(notdir $<)
 # environment
+ITERM_PROFILE = Default
+# environment
+PAGER = less
+# environment
 LC_ALL = C
 # environment
-HOSTTYPE = x86_64
+SECURITYSESSIONID = 186a8
+# environment
+SPACESHIP_ROOT = /Users/tel-mouh/.oh-my-zsh/custom/themes/spaceship-prompt
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# default
-.RECIPEPREFIX := 
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+VSCODE_PID = 8272
 # environment
-WSL_DISTRO_NAME = Ubuntu-18.04
+COLOR3 = \033[1;\033[1;31m
 # variable set hash-table stats:
-# Load=63/1024=6%, Rehash=0, Collisions=3/91=3%
+# Load=93/1024=9%, Rehash=0, Collisions=5/119=4%
 
 # Pattern-specific Variable Values
 
@@ -146,9 +207,9 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 
 # Directories
 
-# . (device 2064, inode 104341): 10 files, no impossibilities.
+# . (device 16777225, inode 4180343): 12 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -157,9 +218,9 @@ WSL_DISTRO_NAME = Ubuntu-18.04
 # Files
 
 all:
-#  Command line target.
+#  Command-line target.
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
+#  Implicit/static pattern stem: `'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
@@ -180,9 +241,10 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  recipe to execute (from 'makefile', line 15):
-	make -C mandatory
+# Load=8/32=25%, Rehash=0, Collisions=1/10=10%
+#  commands to execute (from `makefile', line 15):
+	@ make -C mandatory
+	
 
 # Not a target:
 .SUFFIXES:
@@ -193,24 +255,28 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-05 07:16:30.626846
+#  Last modified 2022-06-10 10:33:03
 #  File has been updated.
 #  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 bonus:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 17):
-	make -C f_bonus
+#  commands to execute (from `makefile', line 17):
+	@ make -C f_bonus
+	
 
 fclean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 20):
-	make fclean -C f_bonus
-	make fclean -C mandatory
+#  commands to execute (from `makefile', line 24):
+	@ make fclean -C f_bonus
+	@ make fclean -C mandatory
+	
 
 # Not a target:
 .DEFAULT:
@@ -223,20 +289,28 @@ re: fclean all
 #  Modification time never checked.
 #  File has not been updated.
 
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 20):
+	@ make clean -C mandatory
+	@ make clean -C f_bonus
+	
+
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/21=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/24=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 143 B / avg = 7 B
-# current buf: size = 8162 B / used = 143 B / count = 18 / avg = 7 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 30 / hit rate = 40%
-# hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/30=3%
-# Finished Make data base on Wed Jun  8 09:25:53 2022
+# Finished Make data base on Fri Jun 10 10:35:22 2022
 
  

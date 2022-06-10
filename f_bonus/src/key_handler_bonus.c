@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   key_handler_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:43:21 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 10:03:01 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 09:43:38 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
 
-void	put_player(t_vars * vars, int keycode)
+void	put_player(t_vars *vars, int keycode)
 {
 	if (keycode == XK_w)
 		mlx_put_image_to_window(vars->mlx_ptr, vars->win_ptr, \
-				vars->imgs.player.up ,vars->player.x * 30 , \
-					vars->player.y*30);
+				vars->imgs.player.up, vars->player.x * 30, \
+					vars->player.y * 30);
 	else if (keycode == XK_a)
 		mlx_put_image_to_window(vars->mlx_ptr, vars->win_ptr, \
-				vars->imgs.player.left ,vars->player.x * 30 , \
-					vars->player.y*30);
+				vars->imgs.player.left, vars->player.x * 30, \
+					vars->player.y * 30);
 	else if (keycode == XK_d)
 		mlx_put_image_to_window(vars->mlx_ptr, vars->win_ptr, \
-				vars->imgs.player.right ,vars->player.x * 30 , \
-					vars->player.y*30);
-	else 
+				vars->imgs.player.right, vars->player.x * 30, \
+					vars->player.y * 30);
+	else
 		mlx_put_image_to_window(vars->mlx_ptr, vars->win_ptr, \
-				vars->imgs.player.down ,vars->player.x * 30 , \
-					vars->player.y*30);
+				vars->imgs.player.down, vars->player.x * 30, \
+					vars->player.y * 30);
 }
 
-static void handle_collectible(t_vars *vars, int keycode, char mobs)
+static void	handle_collectible(t_vars *vars, int keycode, char mobs)
 {
 	clear_mobs(vars, vars->player.x, vars->player.y);
 	if (keycode == XK_s)
@@ -52,11 +52,11 @@ static void handle_collectible(t_vars *vars, int keycode, char mobs)
 	put_mobs(vars, vars->player.x, vars->player.y, 'P');
 }
 
-static void check_sq(t_vars *vars, int keycode, char mobs)
+static void	check_sq(t_vars *vars, int keycode, char mobs)
 {
 	vars->keycode = keycode;
-	if (mobs == '0'  || mobs == 'C')
-		handle_collectible(vars, keycode , mobs);
+	if (mobs == '0' || mobs == 'C')
+		handle_collectible(vars, keycode, mobs);
 	else if (mobs == 'E' && !vars->mobs->collectible)
 	{
 		vars->end = WIN;
@@ -67,12 +67,12 @@ static void check_sq(t_vars *vars, int keycode, char mobs)
 		vars->end = LOSE;
 		exit_game(vars, EXIT_SUCCESS);
 	}
-	mlx_clear_window(vars->mlx_ptr , vars->win_ptr);
+	mlx_clear_window(vars->mlx_ptr, vars->win_ptr);
 	draw_map(vars);
-	put_player(vars,keycode);
+	put_player(vars, keycode);
 }
 
-static void player_key_handler(int key, t_vars *vars)
+static void	player_key_handler(int key, t_vars *vars)
 {
 	if (key == XK_w)
 		check_sq(vars, key, get_mobs(vars, vars->player.y - 1, vars->player.x));
@@ -82,14 +82,14 @@ static void player_key_handler(int key, t_vars *vars)
 		check_sq(vars, key, get_mobs(vars, vars->player.y, vars->player.x + 1));
 	else if (key == XK_a)
 		check_sq(vars, key, get_mobs(vars, vars->player.y, vars->player.x - 1));
-
 }
 
-int key_handler(int keycode , t_vars *vars)
+int	key_handler(int keycode, t_vars *vars)
 {
 	if (keycode == XK_Escape || keycode == XK_q)
 		exit_game(vars, EXIT_SUCCESS);
-	else if (keycode == XK_w || keycode == XK_a || keycode == XK_s\
-		 || keycode == XK_d)
+	else if (keycode == XK_w || keycode == XK_a || keycode == XK_s \
+		|| keycode == XK_d)
 		player_key_handler(keycode, vars);
+	return (0);
 }

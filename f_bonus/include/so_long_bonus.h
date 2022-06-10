@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 06:23:56 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/08 09:25:59 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 10:28:16 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include <stdlib.h>
 
 #ifdef LINUX
-#include "../../minilibx/mlx.h"
+#include "../../minilibx-linux/mlx.h"
 #include <X11/XKBlib.h>
 #include <X11/X.h>
 #include <X11/keysym.h>
 #endif
 
 #ifdef MAC
-#include "../../minilibx-linux/mlx.h"
+#include <mlx.h>
 #include "key_handler.h"
 #endif
 
@@ -33,7 +33,7 @@
 #include <unistd.h>
 #include "../libft/include/libft.h"
 #include "../gnl/get_next_line.h"
-
+#include <math.h>
 #include "types_bonus.h"
 # define LOSE 3
 # define WIN 2
@@ -45,7 +45,6 @@
 t_mapline	*newline(char *s);
 void		add_line(t_mapline **lines, t_mapline *newline);
 int			check_ber(char *s);
-int			check_len(char *s, int len, t_mapline **lines);
 int			str_to_lines(char *s, t_mapline **lines);
 int			parse(int ac, char **av, t_mapline **lines, t_mobs *mobs);
 void		ft_free(t_mapline **lst);

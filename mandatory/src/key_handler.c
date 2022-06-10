@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_handler.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tel-mouh <tel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: tel-mouh <tel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 05:43:21 by tel-mouh          #+#    #+#             */
-/*   Updated: 2022/06/06 08:20:27 by tel-mouh         ###   ########.fr       */
+/*   Updated: 2022/06/10 09:42:21 by tel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,5 @@ int key_handler(int keycode , t_vars *vars)
 	else if (keycode == XK_w || keycode == XK_a || keycode == XK_s\
 		 || keycode == XK_d)
 		player_key_handler(keycode, vars);
+	return (0);
 }
